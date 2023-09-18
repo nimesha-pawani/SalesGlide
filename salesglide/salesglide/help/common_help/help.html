@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Help page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+        
+        .que1 {
+            width: 43%;
+            margin: 1%;
+            padding: 2%;
+            float: left;
+            background-color: white;
+            border-radius: 15px;
+        }
+        
+        .faq {
+            background-color: #ececec;
+            padding: 4% 0;
+        }
+        
+        .faq-img {
+            width: 20%;
+            float: left;
+        }
+        
+        .menu-desc {
+            width: 70%;
+            float: left;
+            margin-left: 8%;
+        }
+        
+        .img-responsive {
+            width: 100%;
+        }
+        
+        .img-curve {
+            border-radius: 15px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="commonHeader">
+        <a href="../../index.php">
+            <div class="logo">
+                <h3 style="font-family:Arial;letter-spacing:6px;">SALESGlide</h3>
+            </div>
+        </a>
+        <div class="date">
+            <?php echo date("Y-m-d"); ?>
+        </div>
+    </div>
+    <center>
+        <h1 style="font-size:50px;">Help Page</h1>
+    </center>
+    <br>
+
+    <div class="que1">
+        <div class="faq-img">
+            <img src="images/help.png" alt="help&support" class="img-responsive img-curve">
+        </div>
+
+        <div class="menu-desc">
+            <h4>Admin Support</h4>
+
+            <p class="detail">
+                Check user name and password before sign in. Then go back to confirmation email...
+            </p>
+            <br>
+
+            <a href="../help admin/help.html" class="btn btn-primary">View More</a>
+        </div>
+    </div>
+
+    <div class="que1">
+        <div class="faq-img">
+            <img src="images/help.png" alt="help&support" class="img-responsive img-curve">
+        </div>
+
+        <div class="menu-desc">
+            <h4>Salesman Support</h4>
+
+            <p class="detail">
+                Check user name and password before sign in. Then go back to confirmation email...
+            </p>
+            <br>
+
+            <a href="../help salesman/help.html" class="btn btn-primary">View More</a>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br>
+
+    <div class="commonFooter">
+        SALESGlide &copy; 2022
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,875 @@
+/* ===========Basic styling ===========*/
+
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #003b83;
+}
+
+body,
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    align-items: center;
+}
+
+.commonHeader {
+    display: flex;
+    height: 10%;
+    background-color: #0F66CD;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.userHeader {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    overflow-x: hidden;
+    display: flex;
+    background-color: #0F66CD;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: large;
+    font-weight: 700;
+    color: white;
+}
+
+.logo a {
+    font-size: large;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.date {
+    font-size: large;
+    font-weight: 600;
+    margin-right: 20px;
+    color: white;
+}
+
+.commonFooter {
+    height: 8%;
+    background-color: #0F66CD;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+}
+
+.userFooter {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #0F66CD;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+}
+
+
+/*=============== home page styling ===========*/
+
+.column-66 {
+    float: left;
+    width: 66.66%;
+}
+
+.column-33 {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+}
+
+div.gallery {
+    float: left;
+    height: 100%;
+    text-align: center;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.gallery h2 {
+    font-weight: 800;
+    color: white;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    padding-left: 40%;
+    padding-right: 50%;
+}
+
+.navBtnLogin {
+    width: 250px;
+    background-color: #0F66CD;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 40%;
+    margin-left: auto;
+    margin-right: 15%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: xx-large;
+    color: white;
+}
+
+.navBtnLogin:hover {
+    opacity: 1;
+}
+
+.navBtnLogin>a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: xx-large;
+    color: white;
+}
+
+.infoHolder {
+    width: 250px;
+    text-align: right;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: 15%;
+}
+
+.infoHolder>a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 36px;
+    color: #0F66CD;
+    bottom: 50%;
+}
+
+.hero-image {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../Images/welcome_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.welcomeWrapper {
+    display: flex;
+    height: 82%;
+}
+
+
+/* Tooltip container */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+    font-size: medium;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+/* Tooltip arrow */
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ==========================login styling ==================*/
+
+.formContainer {
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding: 40px 20px;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.formWrapper {
+    height: 82%;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    font-size: large;
+    color: rgb(131, 0, 0);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/welcome_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.formfont {
+    color: black;
+}
+
+
+/* Full-width input fields */
+
+.formWrapper input[type=text],
+.formWrapper input[type=password],
+.formWrapper input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 30px 0;
+    border: none;
+    background: #f1f1f1;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.formWrapper input[type=text]:focus,
+.formWrapper input[type=password]:focus,
+.formWrapper input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+label {
+    font-size: x-large;
+}
+
+
+/* Set a style for the submit button */
+
+.btn {
+    background-color: #0F66CD;
+    color: white;
+    padding: 16px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.loginHeader {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: large;
+    font-weight: 600;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    vertical-align: middle;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.error {
+    color: red;
+}
+
+
+/*==================== admin home styling===================== */
+
+.logoutBtn {
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #AB3232;
+    border-radius: 5px;
+    padding: 10px;
+    opacity: 0.95;
+}
+
+.logoutBtn:hover {
+    opacity: 1;
+}
+
+.rightTop {
+    font-size: large;
+    font-weight: 600;
+    margin-right: 20px;
+    color: white;
+    vertical-align: middle;
+}
+
+
+/* ================page struture  styling==================== */
+
+
+/* The sidebar menu */
+
+.sidenav {
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 16%;
+    left: 20px;
+    background: #eee;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    color: #2196F3;
+    display: block;
+    width: 200px;
+    margin: 10px 0px;
+}
+
+.sidenav a:hover {
+    color: #064579;
+    background-color: rgb(175, 175, 175);
+}
+
+.main {
+    margin-top: 7%;
+    margin-left: 230px;
+    margin-right: 20px;
+    /* Same width as the sidebar + left position in px */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+.adminSettingsformContainer {
+    height: fit-content;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 20px;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.adminSettingsformContainer td {
+    width: 50%;
+}
+
+.adminSettingsformContainer th {
+    text-align: left;
+    width: 30%;
+}
+
+.adminSettingsformContainer input[type=password],
+.adminSettingsformContainer input[type=text] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #f1f1f1;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.adminSettingsformContainer input[type=password]:focus,
+.adminSettingsformContainer input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.greenBtn {
+    width: 60%;
+    background-color: #087E0D;
+    border: none;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+}
+
+.greenBtn:hover {
+    opacity: 1;
+}
+
+.failalert {
+    margin-top: 40px;
+    width: fit-content;
+    position: absolute;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.okalert {
+    margin-top: 40px;
+    width: fit-content;
+    position: absolute;
+    padding: 20px;
+    background-color: #087E0D;
+    color: white;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.addProductBtn {
+    width: fit-content;
+    background-color: #087E0D;
+    border: none;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+}
+
+.addProductBtn:hover {
+    opacity: 1;
+}
+
+.productTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.info {
+    font-size: medium;
+}
+
+table {
+    font-size: medium;
+}
+
+td {
+    width: fit-content;
+}
+
+.productTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.total {
+    font-size: medium;
+    text-align: right;
+}
+
+
+/* =================add product styling============== */
+
+.backtoproductsBtn {
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #A85203;
+    border-radius: 5px;
+    padding: 10px;
+    opacity: 0.95;
+}
+
+.backtoproductsBtn:hover {
+    opacity: 1;
+}
+
+.options {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+select {
+    font-size: large;
+    border: none;
+    width: 100%;
+    background: #f1f1f1;
+}
+
+select:focus {
+    border: none;
+}
+
+.sectionHeader {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+/*=============== admin sales page styling============ */
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+/* Add some margins for each label */
+
+.form-inline label {
+    margin: 5px 10px 5px 0;
+}
+
+
+/* Style the input fields */
+
+.form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.form-inline-options {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+    background: #f1f1f1;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* Style the submit button */
+
+.form-inline button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    opacity: 0.9;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.form-inline button:hover {
+    opacity: 1;
+}
+
+.form-holder {
+    width: 100%;
+}
+
+.box {
+    border: solid 1px black;
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+
+/* Float cancel and delete buttons and add an equal width */
+
+.cancelbtn,
+.deletebtn {
+    float: left;
+    width: 50%;
+}
+
+
+/* Add a color to the cancel button */
+
+.cancelbtn {
+    background-color: #ccc;
+    color: black;
+}
+
+
+/* Add a color to the delete button */
+
+.deletebtn {
+    background-color: #f44336;
+}
+
+
+/* Add padding and center-align text to the container */
+
+.container {
+    padding: 16px;
+    text-align: center;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* Style the horizontal ruler */
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+/* The Modal Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+
+/* Clear floats */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
